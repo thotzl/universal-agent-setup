@@ -1,8 +1,8 @@
 # Universal Agent Setup
 
-> **📓 Official Documentation & Wiki:** The entire, comprehensive guide, installation how-to, architecture overview, and modular skill documentation has been consolidated under the project's GitHub Wiki.
+> **📓 Official Documentation & Wiki:** The entire, comprehensive guide, installation how-to, architecture overview, and modular skill documentation has been consolidated under the project's official wiki / local documentation.
 
-### 🌐 [Visit the Live GitHub Wiki / Documentation Home](https://github.com/thotzl/universal-agent-setup/wiki)
+### 🌐 [Visit the Documentation Home](./wiki/Home.md)
 
 ---
 
@@ -91,21 +91,22 @@ If the installer encounters file-permission or write restrictions, it will grace
 
 ---
 
-## 📓 Official Wiki Documentation
+## 📓 Official Documentation
 
-Click any link below to jump directly to its beautifully rendered, official documentation page on the GitHub Wiki:
+Click any link below to jump directly to its documentation page:
 
-- [Wiki Landing Page (Home)](https://github.com/thotzl/universal-agent-setup/wiki)
-- [01. Behavioral Baseline Guide](https://github.com/thotzl/universal-agent-setup/wiki/01-core-behavioral-baseline)
-- [02. Analytical Shortcuts Guide](https://github.com/thotzl/universal-agent-setup/wiki/02-core-analytical-shortcuts)
-- [03. Vibe Coding Standard Guide](https://github.com/thotzl/universal-agent-setup/wiki/03-core-vibe-coding)
-- [04. Code Craft Guide](https://github.com/thotzl/universal-agent-setup/wiki/04-core-code-craft)
-- [05. Technical Standards Guide](https://github.com/thotzl/universal-agent-setup/wiki/05-core-technical-standards)
-- [06. Testing Strategies Guide](https://github.com/thotzl/universal-agent-setup/wiki/06-core-testing-strategies)
-- [07. Database Safety Guide](https://github.com/thotzl/universal-agent-setup/wiki/07-core-database-safety)
-- [08. Operations & Ticketing Guide](https://github.com/thotzl/universal-agent-setup/wiki/08-core-ops-and-ticketing)
-- [09. Browser Automation Guide](https://github.com/thotzl/universal-agent-setup/wiki/09-core-browser-automation)
-- [10. Context Management Guide](https://github.com/thotzl/universal-agent-setup/wiki/10-core-context-management)
-- [11. Skill Creator Guide](https://github.com/thotzl/universal-agent-setup/wiki/11-core-skill-creator)
-- [12. Redux Investigator Guide](https://github.com/thotzl/universal-agent-setup/wiki/12-core-redux-investigator)
-- [13. Project & AI Workflows Guide](https://github.com/thotzl/universal-agent-setup/wiki/13-core-project-workflows)
+- [Documentation Landing Page (Home)](./wiki/Home.md)
+- [01. Behavioral Baseline Guide](./wiki/01-core-behavioral-baseline.md)
+- [02. Analytical Shortcuts Guide](./wiki/02-core-analytical-shortcuts.md)
+- [03. Vibe Coding (Rapid Spike) Guide](./wiki/03-core-vibe-coding.md)
+- [04. Code Craft Guide](./wiki/04-core-code-craft.md)
+- [05. Technical Standards Guide](./wiki/05-core-technical-standards.md)
+- [06. Testing Strategies Guide](./wiki/06-core-testing-strategies.md)
+- [07. Database Safety Guide](./wiki/07-core-database-safety.md)
+- [08. Operations & Ticketing Guide](./wiki/08-core-ops-and-ticketing.md)
+- [09. Browser Automation Guide](./wiki/09-core-browser-automation.md)
+- [10. Context Management Guide](./wiki/10-core-context-management.md)
+- [11. Skill Creator Guide](./wiki/11-core-skill-creator.md)
+- [12. Redux Investigator Guide](./wiki/12-core-redux-investigator.md)
+- [13. Project & AI Workflows Guide](./wiki/13-core-project-workflows.md)
+- [14. Agentic Engineering Standard Guide](./wiki/14-core-agentic-engineering.md)

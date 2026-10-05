@@ -20,8 +20,8 @@
       "id": "core-vibe-coding",
       "file": "03-core-vibe-coding.md",
       "version": "1.0.0",
-      "description": "Schema-first, DoD, Phase-gates engineering standard",
-      "tags": ["core", "coding", "standards"],
+      "description": "Rapid prototyping, UI spikes, and hit-run-iterate throwaway code",
+      "tags": ["core", "prototyping", "spikes"],
       "required": false
     },
     {
@@ -102,6 +102,14 @@
       "version": "1.0.0",
       "description": "Workspace context, REPO_MAP sync, and Phase-gates limits",
       "tags": ["core", "workflows"],
+      "required": false
+    },
+    {
+      "id": "core-agentic-engineering",
+      "file": "14-core-agentic-engineering.md",
+      "version": "1.0.0",
+      "description": "Master orchestrator: Dual-loop governance, spec-driven verification, and circuit breakers",
+      "tags": ["core", "engineering", "standards"],
       "required": false
     }
   ]
