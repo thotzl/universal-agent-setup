@@ -6,4 +6,5 @@ node_modules/
 test_sandbox_shared/
 test-agents-setup/
 *.skill
+wiki/
 
