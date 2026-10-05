@@ -200,6 +200,13 @@ async function runE2ETests() {
   console.log("=============================================\n");
 
   try {
+    const manifestRaw = await fs.readFile(
+      path.join(REPO_ROOT, "template/skills/skills.json"),
+      "utf-8",
+    );
+    const { skills: manifestSkills } = JSON.parse(manifestRaw);
+    const totalSkillsCount = manifestSkills.length;
+
     // -------------------------------------------------------------
     // Test Scenario 1: Clean installation of ALL modules (Overwrite)
     // -------------------------------------------------------------
@@ -210,7 +217,7 @@ async function runE2ETests() {
     await fs.mkdir(TEST_DIR, { recursive: true });
 
     await runCliHeadless(TEST_DIR, "overwrite", "all");
-    await verifyInstallation(TEST_DIR, 13); // Expecting 13 skill files
+    await verifyInstallation(TEST_DIR, totalSkillsCount); // Expecting all manifest skills
     console.log("✓ Scenario 1: PASSED\n");
 
     // -------------------------------------------------------------
@@ -322,7 +329,7 @@ async function runE2ETests() {
 
     // Inputs: target_dir, overwrite/merge (1=safe merge), skills ("all"), confirm ("y")
     await runCliInteractive(TEST_DIR, "1", "all", "y");
-    await verifyInstallation(TEST_DIR, 13, true); // Verified all 13 compiled skills
+    await verifyInstallation(TEST_DIR, totalSkillsCount, true); // Verified all compiled skills
 
     const agentsMdInteractive = await fs.readFile(
       path.join(TEST_DIR, "AGENTS.md"),
@@ -353,7 +360,7 @@ async function runE2ETests() {
 
     // Install setup
     await runCliHeadless(TEST_DIR, "safe", "all");
-    await verifyInstallation(TEST_DIR, 13, false);
+    await verifyInstallation(TEST_DIR, totalSkillsCount, false);
 
     // Run uninstall
     const unCmd = `node ${CLI_PATH} --target ${TEST_DIR} --uninstall --yes`;

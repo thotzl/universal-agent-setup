@@ -98,7 +98,7 @@ Click any link below to jump directly to its documentation page:
 - [Documentation Landing Page (Home)](./wiki/Home.md)
 - [01. Behavioral Baseline Guide](./wiki/01-core-behavioral-baseline.md)
 - [02. Analytical Shortcuts Guide](./wiki/02-core-analytical-shortcuts.md)
-- [03. Vibe Coding Standard Guide](./wiki/03-core-vibe-coding.md)
+- [03. Vibe Coding (Rapid Spike) Guide](./wiki/03-core-vibe-coding.md)
 - [04. Code Craft Guide](./wiki/04-core-code-craft.md)
 - [05. Technical Standards Guide](./wiki/05-core-technical-standards.md)
 - [06. Testing Strategies Guide](./wiki/06-core-testing-strategies.md)
@@ -109,3 +109,4 @@ Click any link below to jump directly to its documentation page:
 - [11. Skill Creator Guide](./wiki/11-core-skill-creator.md)
 - [12. Redux Investigator Guide](./wiki/12-core-redux-investigator.md)
 - [13. Project & AI Workflows Guide](./wiki/13-core-project-workflows.md)
+- [14. Agentic Engineering Standard Guide](./wiki/14-core-agentic-engineering.md)
