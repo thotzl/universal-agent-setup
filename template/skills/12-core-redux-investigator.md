@@ -5,19 +5,19 @@ description: Investigate and manipulate live Redux state in the browser using Ja
 
 # Redux Investigator
 
-This skill provides workflows and scripts for analyzing and interacting with a live Redux store within a web application via the `chrome-devtools` MCP server.
+This skill provides workflows and scripts for analyzing and interacting with a live Redux store within a web application via the `chrome-devtools-mcp` MCP server.
 
-Because Gemini CLI cannot directly interface with browser extensions (like the Redux DevTools UI panel), this skill leverages JavaScript evaluation to achieve similar functionality programmatically.
+Because coding agents cannot directly interface with browser extensions (like the Redux DevTools UI panel), this skill leverages JavaScript evaluation to achieve similar functionality programmatically.
 
 ## Prerequisites
 
 - The web application must be running and accessible.
-- A Chrome page must be selected via `mcp_chrome-devtools_select_page`.
+- A Chrome page must be selected via the server's `select_page` tool.
 - **Crucial:** The application MUST expose its Redux store to the global `window` object.
 
 ## Core Workflows
 
-You can interact with Redux by executing JavaScript in the browser using the `mcp_chrome-devtools_evaluate_script` tool.
+You can interact with Redux by executing JavaScript in the browser using the server's `evaluate_script` tool.
 
 ### 1. Finding the Redux Store
 
