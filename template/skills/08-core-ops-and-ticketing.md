@@ -9,9 +9,11 @@ description: Local Markdown ticketing in .tickets/ with changelog and commit con
 
 Execution boundaries (Inquiry vs. Directive) from the root `AGENTS.md` apply. In particular, a question like "Do we have a ticket for X?" is an Inquiry: propose new tickets as text first and create files only after an explicit Directive (e.g., "Create ticket").
 
+If the project uses an external tracker (e.g., Jira, Linear, GitHub Issues), do not create a `.tickets/` folder; reference the tracker key in commits instead (e.g., `feat(scope): brief description (FDP-123)`).
+
 ## II. Markdown-Based Ticketing Space
 
-All tasks, planning, and roadmaps are version-controlled in the `.tickets/` folder at the project root:
+In projects without an external tracker, all tasks, planning, and roadmaps are version-controlled in the `.tickets/` folder at the project root:
 
 ```text
 .tickets/
