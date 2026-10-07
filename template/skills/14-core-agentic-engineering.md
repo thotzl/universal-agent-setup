@@ -37,6 +37,3 @@ Work modes (Inquiry vs. Directive) and phase gates are defined in the root `AGEN
 ## V. Architectural Baselines
 
 {{ INCLUDE: kiss-dry.md }}
-
-- **AbsProduct Pattern:** Prioritize high modularity. When extending software modules or core layers, prefer creating isolated, specialized custom plugins or adapters rather than mutating core framework logic.
-- **Data-Logic Separation (ECS):** Keep state models decoupled from behavior and execution logic to ensure testability and boundary isolation.
