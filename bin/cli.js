@@ -36,7 +36,11 @@ async function compileTemplate(filePath, sharedDir) {
   while ((match = includeRegex.exec(content)) !== null) {
     const includePath = path.resolve(sharedDir, match[1]);
     try {
-      const includeContent = await fs.readFile(includePath, "utf-8");
+      // Trailing newlines of the include would add a blank line to the surrounding markdown
+      const includeContent = (await fs.readFile(includePath, "utf-8")).replace(
+        /\n+$/,
+        "",
+      );
       content = content.replace(match[0], includeContent);
     } catch (err) {
       console.warn(
