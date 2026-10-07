@@ -5,7 +5,7 @@ description: Persisting project knowledge in .agents/skills, structure maps (REP
 
 # Project & AI Workflows
 
-This skill covers workspace conventions and AI context management. Execution boundaries (Inquiry vs. Directive, phase gates) are defined in the root `AGENTS.md`.
+This skill merges workspace conventions with AI context management and execution limits.
 
 ## I. Workspace Mandates
 
@@ -15,7 +15,13 @@ This skill covers workspace conventions and AI context management. Execution bou
   - _Deterministic Global Output:_ The global fallback script scans standard monorepo folders (`packages/`, `apps/`, `src/`) and outputs a markdown list of all `package.json` names/descriptions and a mapped list of API Controllers/Resolvers (`@Controller`, `@Resolver`).
 - **Agnostic Documentation:** When documenting findings or patterns in the workspace ledger (`.agents/skills/`), describe them strictly in terms of file structures and codebase symbols. DO NOT use agent-specific tool names (e.g., `replace`, `write_file`, `Edit`).
 
-## II. Console Monitoring
+## II. Execution Limits & Anti-Overstepping
+
+To prevent the agent from rushing ahead or misinterpreting clarifications as execution commands, adhere to these strict limits:
+
+{{ INCLUDE: execution-boundaries.md }}
+
+## III. Console Monitoring
 
 Use this workflow to observe external processes started by the user or background tasks.
 
@@ -24,6 +30,6 @@ Use this workflow to observe external processes started by the user or backgroun
 3. **Efficient Reading:** Never read the entire log file if it's large. Use a shell command such as `tail -n 100` or `grep` to find specific errors or progress markers.
 4. **Context Request:** If the user mentions a console error, check this log immediately before asking for more information.
 
-## III. Technical Tooling Notes
+## IV. Technical Tooling Notes
 
 - **Bypassing Gitignore:** When accessing or searching within `.agents/` or `.agents/artifacts/`, you MUST ensure your file search and listing tools do not skip gitignored paths (disable gitignore filtering, target the path explicitly, or fall back to shell `find`/`grep`). These directories are often gitignored but essential for agent operations.

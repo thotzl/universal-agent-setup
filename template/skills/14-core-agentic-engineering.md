@@ -5,9 +5,9 @@ description: Autonomous execution discipline - definition of done, spec-first co
 
 # Agentic Engineering
 
-## I. Dual-Loop Governance
+## I. Dual-Loop Governance & Work Modes
 
-Work modes (Inquiry vs. Directive) and phase gates are defined in the root `AGENTS.md`.
+{{ INCLUDE: execution-boundaries.md }}
 
 - **Outer Loop (Architect Control):**
   - **DoD (Definition of Done):** Before executing large implementations, explicitly declare the exact completion criteria. A task is not done until these criteria are fully verified.

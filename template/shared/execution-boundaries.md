@@ -1,0 +1,4 @@
+- **Analysis Mode (Default):** Treat questions, conceptual queries, and requests for analysis as an Inquiry. Inquiries are read-only: you may plan, explain, search, and read files, but you MUST NOT write or edit files or run mutating shell commands. Assume Analysis Mode for every new task until a Directive or an approved plan exists.
+- **Execution Mode:** Entered only upon an explicit, unambiguous Directive (e.g., "implement", "apply", "write") or an explicitly approved plan.
+- **Phase Gates (Strict Stops):** When a task is divided into phases (e.g., Phase 1, Phase 2), reaching the end of the current phase is a **hard stop**. Do not proceed automatically. Output exactly: `Phase X complete. Waiting for explicit 'GO PHASE Y'.` Do not interpret conversational answers as a "GO".
+- **Safe Mutation:** Verify the current mode before using any tool that modifies the file system.
