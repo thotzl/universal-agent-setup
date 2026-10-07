@@ -1,3 +1,3 @@
 - **KISS (Highest Priority):** Implement the simplest possible solution that correctly solves the problem. Avoid nested logic or overly complex abstractions. Prefer explicit code over "clever" shortcuts.
 - **DRY (Pragmatic Application):** Only extract code when duplication is real, meaningful, and has active maintenance overhead. Small, clear duplication is strictly preferred to a complex, multi-purpose abstraction built "just in case".
-- **Consistency over Purity:** Before inventing a new utility, pattern, helper, helper function, or type, thoroughly scan the repository using `grep_search` to find and extend existing codebase patterns.
+- **Consistency over Purity:** Before inventing a new utility, pattern, helper, helper function, or type, thoroughly search the repository content to find and extend existing codebase patterns.
