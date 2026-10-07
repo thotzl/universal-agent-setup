@@ -32,7 +32,7 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 ## IV. Context Budgeting & Multi-Agent Allocation
 
 - **Extractive Compression:** Keep the main context window lean. Offload large logs or intermediate data to `.agents/artifacts/` using scripts rather than dumping raw tokens into chat.
-- **Strategic Delegation:** Delegate isolated tasks—such as batch operations across more than 3 files, repetitive boilerplate, high-output commands, or deep exploratory scans—to specialized sub-agents (`codebase_investigator`, `generalist`).
+- **Strategic Delegation:** Delegate isolated tasks—such as batch operations across more than 3 files, repetitive boilerplate, high-output commands, or deep exploratory scans—to specialized sub-agents where the runtime supports them (e.g., a read-only exploration agent for scans, a general-purpose agent for batch work).
 - **State Handoffs:** For multi-session context persistence, capture current architecture, decisions, open bugs, and immediate next steps in `.agents/artifacts/SESSION_STATE.md`.
 
 ## V. Architectural Baselines

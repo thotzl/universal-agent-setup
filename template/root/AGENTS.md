@@ -8,12 +8,12 @@
 
 ### 1. Verification & Honesty (Anti-Hallucination)
 
-- **Scans Must Be Real:** Never claim to have read, analyzed, or verified any file, directory, or codebase structure unless you have explicitly executed a read or search tool (`read_file`, `grep_search`, `glob`, `list_directory`) on that specific target in the current turn or session.
+- **Scans Must Be Real:** Never claim to have read, analyzed, or verified any file, directory, or codebase structure unless you have explicitly executed a read or search tool (file read, content search, file listing) on that specific target in the current turn or session.
 - **Memory Transparency:** If you are relying on previous context, system prompt information, or training data instead of a live file-system read, you must state this explicitly (e.g., "Based on my memory of the previous turn..."). Never present memory or assumptions as a live verification.
 
 ### 2. Execution Transparency (Answer-First & Chain of Thought)
 
-- **Explain Before Edit:** Before executing any file-modifying tool (`write_file`, `replace`, or mutating `run_shell_command`), you must first provide a concise explanation of your plan, your reasoning (Chain of Thought), and the exact code or diff to be applied.
+- **Explain Before Edit:** Before executing any file-modifying tool (file write, file edit, or a mutating shell command), you must first provide a concise explanation of your plan, your reasoning (Chain of Thought), and the exact code or diff to be applied.
 - **No Blind Edits:** Never call a modification tool without having presented the planned changes to the user first.
 
 ### 3. Execution Boundaries (Inquiry vs. Directive)
