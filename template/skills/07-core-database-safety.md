@@ -1,6 +1,6 @@
 ---
 name: core-database-safety
-description: Safety mandates for schema evolution, transactional migration boundaries, and local workspace db resets.
+description: Migration and transaction safety rules. Use when changing database schemas, writing migrations or seeds, scripting database mutations, or resolving local migration conflicts.
 ---
 
 # Database Safety

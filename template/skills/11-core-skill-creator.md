@@ -1,6 +1,6 @@
 ---
 name: core-skill-creator
-description: Framework-agnostic guide for creating modular, self-contained AI skills that extend agent capabilities with specialized knowledge.
+description: How to write agent-neutral skills (structure, frontmatter, trigger-oriented descriptions, progressive disclosure). Use when creating, restructuring or reviewing a skill.
 ---
 
 # Skill Creator

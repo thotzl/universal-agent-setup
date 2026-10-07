@@ -1,6 +1,6 @@
 ---
 name: core-project-workflows
-description: Maintains workspace context, persisting findings into .agents/skills/, context dumps and REPO_MAP sync, multi-session handoffs, and strict phase-gates and anti-overstepping execution boundaries.
+description: Persisting project knowledge in .agents/skills, structure maps (REPO_MAP, PROJECT_MAP), multi-session handoffs and console log monitoring. Use when documenting findings, syncing repo maps, handing a task over between sessions, or checking .agents/artifacts/console.log.
 ---
 
 # Project & AI Workflows

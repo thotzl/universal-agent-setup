@@ -1,6 +1,6 @@
 ---
 name: core-ops-and-ticketing
-description: GitOps workflow, Markdown-based local ticketing (.tickets/), and atomic changelog maintenance rules.
+description: Local Markdown ticketing in .tickets/ with changelog and commit conventions. Use only in projects that track work in a .tickets/ folder instead of an external tracker such as Jira.
 ---
 
 # Operations & Markdown Ticketing

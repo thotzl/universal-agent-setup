@@ -1,6 +1,6 @@
 ---
 name: core-redux-investigator
-description: Investigate and manipulate live Redux state in the browser using JavaScript evaluation. Use when instructed to analyze Redux state or dispatch actions like the Redux DevTools extension.
+description: Inspect and manipulate a live Redux store via browser JavaScript evaluation, replacing the Redux DevTools panel. Use when asked to read Redux state, find the store, record actions or dispatch actions in a running web app.
 ---
 
 # Redux Investigator

@@ -1,6 +1,6 @@
 ---
 name: core-agentic-engineering
-description: Master orchestrator for high-discipline autonomous engineering. Governs dual-loop execution, contract-driven verification, anti-thrashing circuit breakers, and state handoffs.
+description: Autonomous execution discipline - definition of done, spec-first contracts, deterministic verification, 3-strike circuit breaker and delegation. Use when starting or executing a non-trivial multi-step implementation or debugging task.
 ---
 
 # Agentic Engineering

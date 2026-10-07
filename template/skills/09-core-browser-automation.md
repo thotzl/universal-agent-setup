@@ -1,6 +1,6 @@
 ---
 name: core-browser-automation
-description: Structured UI exploration, WebMCP, state-injection queries, and robust DOM fallbacks.
+description: Interaction hierarchy for web UIs (structured page APIs, JS state inspection, accessibility snapshots). Use when automating, inspecting or debugging a web UI through a browser automation tool.
 ---
 
 # Browser Automation
