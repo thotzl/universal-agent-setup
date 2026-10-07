@@ -1,6 +1,6 @@
 ---
 name: core-technical-standards
-description: Global architectural standards. Emphasizes schema-first design, data-logic separation, and modular safety boundaries.
+description: Schema-first design, data/logic separation, stable interfaces and module boundaries. Use when designing or changing architecture, APIs, DTOs, schemas or public interfaces.
 ---
 
 # Technical Standards

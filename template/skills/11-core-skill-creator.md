@@ -1,6 +1,6 @@
 ---
 name: core-skill-creator
-description: Framework-agnostic guide for creating modular, self-contained AI skills that extend agent capabilities with specialized knowledge.
+description: How to write agent-neutral skills (structure, frontmatter, trigger-oriented descriptions, progressive disclosure). Use when creating, restructuring or reviewing a skill.
 ---
 
 # Skill Creator
@@ -22,7 +22,7 @@ A standard skill is packaged inside a single directory:
 ```text
 skill-name/
 ├── SKILL.md (required)
-│   ├── YAML frontmatter (only 'name' and 'description' keys)
+│   ├── YAML frontmatter ('name' and 'description' required)
 │   └── Markdown guidelines and triggers
 ├── scripts/    - (Optional) Executable scripts (Python, JS, Bash) for deterministic workflows
 ├── references/ - (Optional) Heavy API schema docs, policies, or structural maps
@@ -36,12 +36,17 @@ The `SKILL.md` file must start with clean YAML frontmatter:
 ```yaml
 ---
 name: skill-name
-description: Clear, single-line description outlining what the skill does and exactly when the AI should activate it.
+description: What the skill covers in one sentence. Use when <concrete trigger conditions>.
 ---
 ```
+
+- **Portable minimum:** `name` (matching the directory name) and `description` are understood by all agents. Some agents support extra keys (e.g., tool restrictions); treat them as optional and never rely on them for correctness.
+- **Description is the trigger:** Many agents only see the description until they decide to load the skill. State _what_ it covers and _when_ to use it (`Use when ...`), naming the concrete tasks, files, frameworks, or keywords that should activate it. A description that only names the topic ("Global standards for X") will rarely trigger.
+- **Keep it valid YAML:** One line, no `: ` sequence inside the value (or quote the whole value).
+- **Self-contained:** A skill must work when installed on its own. Never rely on `AGENTS.md` or other files outside the skill directory for its rules; inline shared text instead (in this repo via the `INCLUDE` template tag, which compiles files from `template/shared/` into the skill).
 
 ## III. Verification & Packaging
 
 1. **Test Scripts:** Execute all bundled scripts locally first to ensure they output clean, LLM-friendly stdout and suppress standard stack traces.
 2. **Remove Placeholders:** Ensure absolutely zero placeholders or task indicators remain in any markdown or script.
-3. **Zip Packaging:** Once verified, zip the skill directory and rename its extension to `.skill` (e.g., `zip -r my-skill.skill my-skill-folder/`) for distribution and installation.
+3. **Distribution:** Agents load the plain skill directory, so copying it into the target skills folder is enough. For sharing as a single file, zip the directory and use the `.skill` extension (e.g., `zip -r my-skill.skill my-skill-folder/`).

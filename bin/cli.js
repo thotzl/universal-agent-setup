@@ -36,7 +36,11 @@ async function compileTemplate(filePath, sharedDir) {
   while ((match = includeRegex.exec(content)) !== null) {
     const includePath = path.resolve(sharedDir, match[1]);
     try {
-      const includeContent = await fs.readFile(includePath, "utf-8");
+      // Trailing newlines of the include would add a blank line to the surrounding markdown
+      const includeContent = (await fs.readFile(includePath, "utf-8")).replace(
+        /\n+$/,
+        "",
+      );
       content = content.replace(match[0], includeContent);
     } catch (err) {
       console.warn(
@@ -417,7 +421,11 @@ async function runInstaller(options, modules) {
     // AGENTS.md
     const srcAgentsMd = path.join(templateRoot, "AGENTS.md");
     const destAgentsMd = path.join(targetDir, "AGENTS.md");
-    let agentsMdContent = await fs.readFile(srcAgentsMd, "utf-8");
+    // Compiled like skills so shared rules (e.g. execution boundaries) stay in sync
+    let agentsMdContent = await compileTemplate(
+      srcAgentsMd,
+      path.join(REPO_ROOT, "template", "shared"),
+    );
 
     let agentsMdExists = false;
     try {

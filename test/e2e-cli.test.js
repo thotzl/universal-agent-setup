@@ -102,6 +102,11 @@ async function verifyInstallation(
       throw new Error("AGENTS.md has missing core content!");
     }
   }
+  if (agentsMd.includes("{{ INCLUDE")) {
+    throw new Error(
+      "Compilation Failure: Unresolved include tag found in AGENTS.md!",
+    );
+  }
 
   // 5. Verify Compiled Skills Count & Include Resolution
   const installedSkills = await fs.readdir(skillsDir);
