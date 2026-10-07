@@ -41,6 +41,5 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 - **DRY (Pragmatic Application):** Only extract code when duplication is real, meaningful, and has active maintenance overhead. Small, clear duplication is strictly preferred to a complex, multi-purpose abstraction built "just in case".
 - **Consistency over Purity:** Before inventing a new utility, pattern, helper, helper function, or type, thoroughly scan the repository using `grep_search` to find and extend existing codebase patterns.
 
-
 - **AbsProduct Pattern:** Prioritize high modularity. When extending software modules or core layers, prefer creating isolated, specialized custom plugins or adapters rather than mutating core framework logic.
 - **Data-Logic Separation (ECS):** Keep state models decoupled from behavior and execution logic to ensure testability and boundary isolation.
