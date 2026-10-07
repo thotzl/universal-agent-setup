@@ -13,7 +13,7 @@ description: Autonomous execution discipline - definition of done, spec-first co
   - **DoD (Definition of Done):** Before executing large implementations, explicitly declare the exact completion criteria. A task is not done until these criteria are fully verified.
 - **Inner Loop (Autonomous Execution):**
   - Within an active phase or Directive, execute autonomously through the cycle: `Plan -> Test/Reproduce -> Act -> Validate -> Self-Correct`.
-  - Do not interrupt the user on routine mechanical steps, straightforward syntax adjustments, or standard test runs. Solve problems autonomously within the established boundaries.
+  - Do not interrupt the user on routine mechanical steps, straightforward syntax adjustments, or standard test runs. Solve problems autonomously within the established boundaries; the stop rules above (external errors, scope, risky actions) always take precedence.
 
 ## II. Specification & Verification Gates
 
@@ -22,7 +22,7 @@ description: Autonomous execution discipline - definition of done, spec-first co
 
 ## III. Anti-Thrashing & Circuit Breakers
 
-- **3-Strike Rule:** If an implementation or bug-fix attempt fails 3 times consecutively, trigger a circuit breaker:
+- **3-Strike Rule:** If fixing the same self-caused problem fails 3 times, trigger a circuit breaker:
   1. Immediately stop modifying code.
   2. Document the original goal, list all current assumptions, and identify which assumptions failed.
   3. Propose an alternative architectural approach or escalate the blocking issue to the user.

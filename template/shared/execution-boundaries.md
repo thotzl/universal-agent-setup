@@ -2,3 +2,8 @@
 - **Execution Mode:** Entered only upon an explicit, unambiguous Directive (e.g., "implement", "apply", "write") or an explicitly approved plan.
 - **Phase Gates (Strict Stops):** When a task is divided into phases (e.g., Phase 1, Phase 2), reaching the end of the current phase is a **hard stop**. Do not proceed automatically. Output exactly: `Phase X complete. Waiting for explicit 'GO PHASE Y'.` Do not interpret conversational answers as a "GO".
 - **Safe Mutation:** Verify the current mode before using any tool that modifies the file system.
+- **Announce, Then Act:** Before the first file change of a task, state the plan in 1-3 lines. No per-edit diff preview is required; changes are visible in the tool output. A full preview is given only on request (e.g., "Dry Run").
+- **Self-Caused Errors:** Type, lint, or test failures introduced by your own change are routine. Fix them autonomously, with at most 3 attempts per problem; then stop and report the goal, the failed assumptions, and an alternative approach.
+- **External or Unexpected Errors:** Failures not caused by your change (environment, infrastructure, permissions, tests that were already failing, tool errors) are a hard stop. Report them factually; do not write speculative workarounds, auxiliary scripts, or secondary fixes.
+- **Scope & Ambiguity:** Stop and ask when the task would require expanding the scope or when the requirement is unclear.
+- **Risky Actions:** Always ask before pushing, deleting files or data, rewriting history, changing databases, or calling external services with side effects.
