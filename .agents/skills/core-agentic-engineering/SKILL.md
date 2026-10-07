@@ -32,14 +32,14 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 ## IV. Context Budgeting & Multi-Agent Allocation
 
 - **Extractive Compression:** Keep the main context window lean. Offload large logs or intermediate data to `.agents/artifacts/` using scripts rather than dumping raw tokens into chat.
-- **Strategic Delegation:** Delegate isolated tasks—such as batch operations across more than 3 files, repetitive boilerplate, high-output commands, or deep exploratory scans—to specialized sub-agents (`codebase_investigator`, `generalist`).
+- **Strategic Delegation:** Delegate isolated tasks—such as batch operations across more than 3 files, repetitive boilerplate, high-output commands, or deep exploratory scans—to specialized sub-agents where the runtime supports them (e.g., a read-only exploration agent for scans, a general-purpose agent for batch work).
 - **State Handoffs:** For multi-session context persistence, capture current architecture, decisions, open bugs, and immediate next steps in `.agents/artifacts/SESSION_STATE.md`.
 
 ## V. Architectural Baselines
 
 - **KISS (Highest Priority):** Implement the simplest possible solution that correctly solves the problem. Avoid nested logic or overly complex abstractions. Prefer explicit code over "clever" shortcuts.
 - **DRY (Pragmatic Application):** Only extract code when duplication is real, meaningful, and has active maintenance overhead. Small, clear duplication is strictly preferred to a complex, multi-purpose abstraction built "just in case".
-- **Consistency over Purity:** Before inventing a new utility, pattern, helper, helper function, or type, thoroughly scan the repository using `grep_search` to find and extend existing codebase patterns.
+- **Consistency over Purity:** Before inventing a new utility, pattern, helper, helper function, or type, thoroughly search the repository content to find and extend existing codebase patterns.
 
 - **AbsProduct Pattern:** Prioritize high modularity. When extending software modules or core layers, prefer creating isolated, specialized custom plugins or adapters rather than mutating core framework logic.
 - **Data-Logic Separation (ECS):** Keep state models decoupled from behavior and execution logic to ensure testability and boundary isolation.
