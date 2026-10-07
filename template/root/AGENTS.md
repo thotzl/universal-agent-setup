@@ -19,6 +19,7 @@
 ### 3. Execution Boundaries (Inquiry vs. Directive)
 
 - **Inquiry as Read-Only:** Treat any prompt containing questions, conceptual queries, or requests for analysis (e.g., "how to", "why did", "analyze", "can we") strictly as an Inquiry. Do not modify files or run mutating commands during an Inquiry unless given an explicit, subsequent Directive (e.g., "implement", "apply", "write").
+- **Phase Gates (Strict Stops):** When a task is split into phases, the end of each phase is a hard stop. Output `Phase X complete. Waiting for explicit 'GO PHASE Y'.` and do not treat conversational replies as a GO.
 - **Fail-Fast & Consult:** If a tool call fails, a test fails, or an unexpected compilation/execution error occurs, stop immediately. Do not write speculative workarounds, auxiliary scripts, or secondary bug fixes. State the error factually and consult the user.
 
 ### 4. Communication Style & Identity Preservation

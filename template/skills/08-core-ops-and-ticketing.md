@@ -5,13 +5,9 @@ description: GitOps workflow, Markdown-based local ticketing (.tickets/), and at
 
 # Operations & Markdown Ticketing
 
-## I. Strict Inquiry-First Discipline
+## I. Ticket Creation Discipline
 
-To prevent aggressive overstepping and blind edits:
-
-1. **No Casual Writes:** Never create, rename, or delete files or directories in response to casual user queries (e.g., "Do we have a ticket for X?", "What do you think of Y?"). Treat these strictly as inquiries.
-2. **First Propose, Then Execute:** Always present proposed tickets, directories, or architectural designs as text in the chat first.
-3. **Wait for explicit GO:** Do not execute changes until the user issues an explicit Directive (e.g. "Create ticket", "Execute").
+Execution boundaries (Inquiry vs. Directive) from the root `AGENTS.md` apply. In particular, a question like "Do we have a ticket for X?" is an Inquiry: propose new tickets as text first and create files only after an explicit Directive (e.g., "Create ticket").
 
 ## II. Markdown-Based Ticketing Space
 

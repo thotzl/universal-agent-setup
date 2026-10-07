@@ -5,12 +5,11 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 
 # Agentic Engineering
 
-## I. Dual-Loop Governance & Work Modes
+## I. Dual-Loop Governance
 
-- **ANALYSIS MODE (Default):** Read-only exploration, scanning, planning, and mental model assembly. Modifying system files is strictly forbidden during an Inquiry.
-- **EXECUTION MODE:** Entered strictly upon receiving an explicit, unambiguous Directive.
+Work modes (Inquiry vs. Directive) and phase gates are defined in the root `AGENTS.md`.
+
 - **Outer Loop (Architect Control):**
-  - **Phase Gates (Strict Stops):** For complex multi-phase tasks, reaching the end of a phase is a **hard stop**. Do not proceed automatically. Present: `Phase X complete. Waiting for explicit 'GO PHASE Y'.`
   - **DoD (Definition of Done):** Before executing large implementations, explicitly declare the exact completion criteria. A task is not done until these criteria are fully verified.
 - **Inner Loop (Autonomous Execution):**
   - Within an active phase or Directive, execute autonomously through the cycle: `Plan -> Test/Reproduce -> Act -> Validate -> Self-Correct`.
