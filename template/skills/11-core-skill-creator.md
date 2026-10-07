@@ -43,7 +43,7 @@ description: What the skill covers in one sentence. Use when <concrete trigger c
 - **Portable minimum:** `name` (matching the directory name) and `description` are understood by all agents. Some agents support extra keys (e.g., tool restrictions); treat them as optional and never rely on them for correctness.
 - **Description is the trigger:** Many agents only see the description until they decide to load the skill. State _what_ it covers and _when_ to use it (`Use when ...`), naming the concrete tasks, files, frameworks, or keywords that should activate it. A description that only names the topic ("Global standards for X") will rarely trigger.
 - **Keep it valid YAML:** One line, no `: ` sequence inside the value (or quote the whole value).
-- **Self-contained:** A skill must work when installed on its own. Never rely on `AGENTS.md` or other files outside the skill directory for its rules; inline shared text instead (in this repo via `{{ INCLUDE: <file> }}` from `template/shared/`).
+- **Self-contained:** A skill must work when installed on its own. Never rely on `AGENTS.md` or other files outside the skill directory for its rules; inline shared text instead (in this repo via the `INCLUDE` template tag, which compiles files from `template/shared/` into the skill).
 
 ## III. Verification & Packaging
 
