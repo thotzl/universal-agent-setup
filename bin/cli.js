@@ -421,7 +421,11 @@ async function runInstaller(options, modules) {
     // AGENTS.md
     const srcAgentsMd = path.join(templateRoot, "AGENTS.md");
     const destAgentsMd = path.join(targetDir, "AGENTS.md");
-    let agentsMdContent = await fs.readFile(srcAgentsMd, "utf-8");
+    // Compiled like skills so shared rules (e.g. execution boundaries) stay in sync
+    let agentsMdContent = await compileTemplate(
+      srcAgentsMd,
+      path.join(REPO_ROOT, "template", "shared"),
+    );
 
     let agentsMdExists = false;
     try {
