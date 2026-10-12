@@ -6,8 +6,9 @@ import os from "os";
 import readline from "readline/promises";
 import { stdin as input, stdout as output } from "process";
 import { program } from "commander";
+import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
 
 // Helper to expand user home directory shortcut (~)
