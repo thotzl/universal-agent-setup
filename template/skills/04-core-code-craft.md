@@ -1,6 +1,6 @@
 ---
 name: core-code-craft
-description: Stack-agnostic engineering standards. Focuses on implement-review-simplify, readability, input validation, and safety boundaries.
+description: Implement-review-simplify workflow, KISS/DRY, readability and a pre-flight checklist. Use when writing, changing, refactoring or reviewing production code in any language.
 ---
 
 # Code Craft

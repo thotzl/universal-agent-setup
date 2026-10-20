@@ -1,20 +1,19 @@
 ---
 name: core-agentic-engineering
-description: Master orchestrator for high-discipline autonomous engineering. Governs dual-loop execution, contract-driven verification, anti-thrashing circuit breakers, and state handoffs.
+description: Autonomous execution discipline - definition of done, spec-first contracts, deterministic verification, 3-strike circuit breaker and delegation. Use when starting or executing a non-trivial multi-step implementation or debugging task.
 ---
 
 # Agentic Engineering
 
 ## I. Dual-Loop Governance & Work Modes
 
-- **ANALYSIS MODE (Default):** Read-only exploration, scanning, planning, and mental model assembly. Modifying system files is strictly forbidden during an Inquiry.
-- **EXECUTION MODE:** Entered strictly upon receiving an explicit, unambiguous Directive.
+{{ INCLUDE: execution-boundaries.md }}
+
 - **Outer Loop (Architect Control):**
-  - **Phase Gates (Strict Stops):** For complex multi-phase tasks, reaching the end of a phase is a **hard stop**. Do not proceed automatically. Present: `Phase X complete. Waiting for explicit 'GO PHASE Y'.`
   - **DoD (Definition of Done):** Before executing large implementations, explicitly declare the exact completion criteria. A task is not done until these criteria are fully verified.
 - **Inner Loop (Autonomous Execution):**
   - Within an active phase or Directive, execute autonomously through the cycle: `Plan -> Test/Reproduce -> Act -> Validate -> Self-Correct`.
-  - Do not interrupt the user on routine mechanical steps, straightforward syntax adjustments, or standard test runs. Solve problems autonomously within the established boundaries.
+  - Do not interrupt the user on routine mechanical steps, straightforward syntax adjustments, or standard test runs. Solve problems autonomously within the established boundaries; the stop rules above (external errors, scope, risky actions) always take precedence.
 
 ## II. Specification & Verification Gates
 
@@ -23,7 +22,7 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 
 ## III. Anti-Thrashing & Circuit Breakers
 
-- **3-Strike Rule:** If an implementation or bug-fix attempt fails 3 times consecutively, trigger a circuit breaker:
+- **3-Strike Rule:** If fixing the same self-caused problem fails 3 times, trigger a circuit breaker:
   1. Immediately stop modifying code.
   2. Document the original goal, list all current assumptions, and identify which assumptions failed.
   3. Propose an alternative architectural approach or escalate the blocking issue to the user.
@@ -38,6 +37,3 @@ description: Master orchestrator for high-discipline autonomous engineering. Gov
 ## V. Architectural Baselines
 
 {{ INCLUDE: kiss-dry.md }}
-
-- **AbsProduct Pattern:** Prioritize high modularity. When extending software modules or core layers, prefer creating isolated, specialized custom plugins or adapters rather than mutating core framework logic.
-- **Data-Logic Separation (ECS):** Keep state models decoupled from behavior and execution logic to ensure testability and boundary isolation.

@@ -1,6 +1,6 @@
 ---
 name: core-context-management
-description: High context-window efficiency through extractive compression, workspace sandboxing, and local log parsing.
+description: Context window hygiene - filter large logs and outputs with local scripts instead of reading them raw. Use when handling large logs, JSON or XML dumps, long command output, or multi-session state handoffs.
 ---
 
 # Context Management

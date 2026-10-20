@@ -1,6 +1,6 @@
 ---
 name: core-vibe-coding
-description: Rapid prototyping and spike mode. Bypasses formal architectural gates, tests, and heavy ceremony to build fast disposable proof-of-concepts and UI drafts.
+description: Rapid spike mode with relaxed guardrails. Use only when the user explicitly asks for a spike, prototype, proof of concept, hackathon code or a throwaway UI draft, never for production code.
 ---
 
 # Vibe Coding (Rapid Spike Mode)

@@ -1,11 +1,11 @@
 ---
 name: core-project-workflows
-description: Maintains workspace context, persisting findings into .agents/skills/, context dumps and REPO_MAP sync, multi-session handoffs, and strict phase-gates and anti-overstepping execution boundaries.
+description: Persisting project knowledge in .agents/skills, structure maps (REPO_MAP, PROJECT_MAP), multi-session handoffs and console log monitoring. Use when documenting findings, syncing repo maps, handing a task over between sessions, or checking .agents/artifacts/console.log.
 ---
 
 # Project & AI Workflows
 
-This skill merges workspace conventions with advanced AI context management and execution limits.
+This skill merges workspace conventions with AI context management and execution limits.
 
 ## I. Workspace Mandates
 
@@ -19,16 +19,7 @@ This skill merges workspace conventions with advanced AI context management and 
 
 To prevent the agent from rushing ahead or misinterpreting clarifications as execution commands, adhere to these strict limits:
 
-1. **Workflow Modes:**
-   - `MODE: ANALYSIS` -> Read-only. You may plan, explain, search, and read files. You MUST NOT write or edit files or run mutating shell commands.
-   - `MODE: EXECUTION` -> Read/Write. You may modify the codebase.
-     _(Assume ANALYSIS mode for all new tasks until a plan is explicitly approved)._
-
-2. **Phase Gates (Strict Stops):**
-   - When a task is divided into phases (e.g., Phase 1, Phase 2), reaching the end of the current phase is a **HARD STOP**.
-   - Do NOT proceed to the next phase automatically.
-   - Output exactly: `Phase X complete. Waiting for explicit 'GO PHASE Y'.`
-   - Do not interpret conversational answers as a "GO". Only proceed when explicitly told to execute the next phase.
+{{ INCLUDE: execution-boundaries.md }}
 
 ## III. Console Monitoring
 
@@ -42,4 +33,3 @@ Use this workflow to observe external processes started by the user or backgroun
 ## IV. Technical Tooling Notes
 
 - **Bypassing Gitignore:** When accessing or searching within `.agents/` or `.agents/artifacts/`, you MUST ensure your file search and listing tools do not skip gitignored paths (disable gitignore filtering, target the path explicitly, or fall back to shell `find`/`grep`). These directories are often gitignored but essential for agent operations.
-- **Safe Mutation:** Always verify the `MODE` before using any tool that modifies the file system.

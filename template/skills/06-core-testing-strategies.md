@@ -1,6 +1,6 @@
 ---
 name: core-testing-strategies
-description: Reproduction-first, Right-lane allocation, and surgical mocking principles for robust test verification.
+description: Reproduction-first bug fixing, test tier selection and surgical mocking. Use when fixing a bug, writing or changing tests, or choosing between unit, integration and E2E tests.
 ---
 
 # Testing Strategies

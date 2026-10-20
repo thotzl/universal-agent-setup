@@ -1,6 +1,6 @@
 ---
 name: core-ops-and-ticketing
-description: GitOps workflow, Markdown-based local ticketing (.tickets/), and atomic changelog maintenance rules.
+description: Local Markdown ticketing in .tickets/ with changelog and commit conventions. Use only in projects that track work in a .tickets/ folder instead of an external tracker such as Jira.
 ---
 
 # Operations & Markdown Ticketing
@@ -13,9 +13,11 @@ To prevent aggressive overstepping and blind edits:
 2. **First Propose, Then Execute:** Always present proposed tickets, directories, or architectural designs as text in the chat first.
 3. **Wait for explicit GO:** Do not execute changes until the user issues an explicit Directive (e.g. "Create ticket", "Execute").
 
+If the project uses an external tracker (e.g., Jira, Linear, GitHub Issues), do not create a `.tickets/` folder; reference the tracker key in commits instead (e.g., `feat(scope): brief description (FDP-123)`).
+
 ## II. Markdown-Based Ticketing Space
 
-All tasks, planning, and roadmaps are version-controlled in the `.tickets/` folder at the project root:
+In projects without an external tracker, all tasks, planning, and roadmaps are version-controlled in the `.tickets/` folder at the project root:
 
 ```text
 .tickets/

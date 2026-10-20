@@ -1,6 +1,6 @@
 ---
 name: core-analytical-shortcuts
-description: Provides semantic shortcuts (AIC, DoD, MECE, OODA, TL;DR) to enforce highly analytical, objective, and efficient AI responses without conversational boilerplate.
+description: Defines the prompt shortcuts AIC, CoT, MECE, OODA, TL;DR, No Yapping, Objective, Dry Run, Raw and Inquiry. Use when a user prompt contains one of these shortcuts or asks for a structured analysis format.
 ---
 
 # Analytical Shortcuts

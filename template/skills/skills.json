@@ -60,7 +60,7 @@
       "id": "core-ops-and-ticketing",
       "file": "08-core-ops-and-ticketing.md",
       "version": "1.0.0",
-      "description": "Markdown ticketing (.tickets/), atomic changelogs",
+      "description": "Optional local Markdown ticketing (.tickets/) for repos without an external tracker, atomic changelogs",
       "tags": ["core", "operations", "gitops"],
       "required": false
     },
